@@ -27,7 +27,9 @@ public class User {
 	private String firstName;
 	
 	private String middleName;
+
 	private String lastName;
+	
 	private String email;
 	
 	public User(String username, String firstName, String middleName, String lastName, String email) {
