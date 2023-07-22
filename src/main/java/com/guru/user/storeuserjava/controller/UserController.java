@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.guru.user.storeuserjava.entity.User;
 import com.guru.user.storeuserjava.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -21,7 +23,7 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("{id}")
-	public ResponseEntity<User> getUser(@PathVariable Long id){
+	public ResponseEntity<User> getUser(@PathVariable @Valid Long id){
 		User user =  userService.getUser(id);
 		return ResponseEntity.status(HttpStatus.CREATED).body(user);
 	}
