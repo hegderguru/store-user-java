@@ -1,4 +1,4 @@
 from openjdk:17
 expose 8080
-add target/store-user-java.jar
+add target/store-user-java.jar store-user-java.jar
 ENTRYPOINT ["java","-jar","/store-user-java.jar"]
